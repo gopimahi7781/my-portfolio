@@ -167,3 +167,25 @@ body {
 html {
   scroll-behavior: smooth;
 }
+.contact form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+  gap: 10px;
+}
+
+.contact input,
+.contact textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact button {
+  background: #0ea5e9;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
