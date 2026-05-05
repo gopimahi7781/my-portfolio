@@ -1,127 +1,113 @@
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* BODY */
 body {
-  font-family: Arial;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f8fafc;
 }
 
-/* NAVBAR FIX */
+/* Navbar */
 .navbar {
-  width: 100%;
-  background: #0f172a;
-  color: white;
   display: flex;
-  justify-content: space-between; /* LEFT + RIGHT FIX */
-  align-items: center;
-  padding: 15px 40px;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: #0f172a;
 }
 
 .logo {
-  color: white;
+  color: white; /* 👉 FIX (white text) */
+  font-weight: bold;
+  font-size: 20px;
 }
 
-/* RIGHT SIDE MENU */
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 25px;
-}
-
-.nav-links li a {
+.nav-links a {
+  margin: 0 15px;
   color: white;
   text-decoration: none;
-  transition: 0.3s;
+  font-size: 14px;
 }
 
-.nav-links li a:hover {
-  color: #0ea5e9;
-}
-
-/* HERO */
-.hero {
+/* Home */
+.home {
   text-align: center;
-  padding: 80px 20px;
-  animation: fadeIn 1s ease-in;
+  padding: 80px 20px; /* 👉 MORE SPACE */
 }
 
-.profile {
+.profile-img {
   width: 120px;
   border-radius: 50%;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .btn {
-  margin-top: 15px;
+  background: #0ea5e9;
+  color: white;
   padding: 10px 20px;
-  background: #0ea5e9;
-  color: white;
   border: none;
-  border-radius: 5px;
-  transition: 0.3s;
+  margin-top: 15px;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
-.btn:hover {
-  background: #0284c7;
-}
-
-/* SECTIONS */
-.section {
+/* Sections spacing FIX */
+.about, .skills, .projects, .contact {
   text-align: center;
-  padding: 60px 20px;
+  padding: 80px 20px; /* 👉 BIG SPACE */
 }
 
-/* SKILLS */
-.skills {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
+/* Skills */
+.skill-list {
   margin-top: 20px;
-  flex-wrap: wrap;
 }
 
-.skills span {
+.skill-list span {
   background: #0ea5e9;
   color: white;
-  padding: 8px 15px;
+  padding: 8px 16px;
+  margin: 8px;
   border-radius: 20px;
+  display: inline-block;
 }
 
-/* PROJECTS */
-.projects {
+/* Projects */
+.project-container {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 30px; /* 👉 MORE GAP */
   margin-top: 30px;
   flex-wrap: wrap;
 }
 
-.card {
-  width: 280px;
-  padding: 20px;
-  background: #f3f4f6;
-  border-radius: 10px;
+.project-card {
+  padding: 25px;
+  border-radius: 12px;
+  width: 250px;
+  background: white;
   transition: 0.3s;
+  
+  /* 👉 SHADOW ADD */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.card:hover {
-  transform: translateY(-10px);
+/* 👉 HOVER EFFECT */
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-.card button {
+/* Buttons */
+.btn-group {
+  margin-top: 15px;
+}
+
+.project-card button {
+  padding: 6px 12px;
   margin: 5px;
-  padding: 8px 15px;
-  background: black;
-  color: white;
   border: none;
   border-radius: 5px;
+  background: #111;
+  color: white;
+  cursor: pointer;
 }
-
-/* ANIMATION */
+/* 🔥 FADE IN ANIMATION */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -133,15 +119,51 @@ body {
   }
 }
 
-/* MOBILE RESPONSIVE */
-@media (max-width: 768px) {
-  .nav-links {
-    flex-direction: column;
-    gap: 10px;
-  }
+/* Apply to sections */
+.home, .about, .skills, .projects, .contact {
+  animation: fadeIn 1s ease-in-out;
+}
 
-  .projects {
-    flex-direction: column;
-    align-items: center;
-  }
+/* 🔥 PROFILE IMAGE ANIMATION */
+.profile-img {
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* 🔥 BUTTON HOVER EFFECT */
+.btn:hover {
+  background: #0284c7;
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+/* 🔥 PROJECT CARD HOVER (upgrade) */
+.project-card {
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+/* 🔥 NAV LINKS HOVER */
+.nav-links a {
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: white;
+  left: 0;
+  bottom: -3px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+html {
+  scroll-behavior: smooth;
 }

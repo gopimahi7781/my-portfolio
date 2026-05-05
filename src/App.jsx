@@ -1,41 +1,41 @@
-import "./App.css";
+import './App.css'
 
 function App() {
   return (
-    <>
-      {/* NAVBAR */}
+    <div>
+
+      {/* Navbar */}
       <nav className="navbar">
-        <h2 className="logo">My Portfolio</h2>
-        <ul className="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+        <h2 className="logo">My Portfolio</h2> {/* 👉 FIX */}
+        
+        <div className="nav-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
       </nav>
 
-      {/* HERO */}
-      <section id="home" className="hero">
-        <img src="/professionalme.jpeg" alt="me" className="profile" />
+      {/* Home */}
+      <section id="home" className="home">
+        <img src="/professionalme.jpeg" alt="profile" className="profile-img" />
         <h1>Hello, I'm Gopi 👋</h1>
-        <h2>Frontend Developer</h2>
+        <h3>Frontend Developer</h3>
         <p>I build websites using React</p>
         <button className="btn">Download Resume</button>
       </section>
 
-      {/* ABOUT */}
-      <section id="about" className="section">
+      {/* About */}
+      <section id="about" className="about">
         <h1>About Me</h1>
-        <p>
-          I am a passionate frontend developer learning React and building projects.
-        </p>
+        <p>I am a passionate frontend developer learning React and building projects.</p>
       </section>
 
-      {/* SKILLS */}
-      <section id="skills" className="section">
+      {/* Skills */}
+      <section id="skills" className="skills">
         <h1>Skills</h1>
-        <div className="skills">
+        <div className="skill-list">
           <span>HTML</span>
           <span>CSS</span>
           <span>JavaScript</span>
@@ -43,42 +43,59 @@ function App() {
         </div>
       </section>
 
-      {/* PROJECTS */}
-      <section id="projects" className="section">
+      {/* Projects */}
+      <section id="projects" className="projects">
         <h1>Projects</h1>
 
-        <div className="projects">
-          <div className="card">
+        <div className="project-container">
+
+          {/* E-Commerce */}
+          <div className="project-card">
             <h3>E-Commerce</h3>
             <p>React + Node.js website</p>
-            <button>View</button>
-            <button>GitHub</button>
+            <div className="btn-group">
+              <button>View</button>
+              <button>GitHub</button>
+            </div>
           </div>
 
-          <div className="card">
+          {/* Restaurant */}
+          <div className="project-card">
             <h3>Restaurant</h3>
             <p>Food ordering UI</p>
-            <button>View</button>
-            <button>GitHub</button>
+            <div className="btn-group">
+              <button>View</button>
+              <button>GitHub</button>
+            </div>
           </div>
 
-          <div className="card">
+          {/* Portfolio */}
+          <div className="project-card">
             <h3>Portfolio</h3>
             <p>Personal website</p>
-            <button>View</button>
-            <button>GitHub</button>
+            <div className="btn-group">
+              <button>View</button>
+
+              {/* 👉 GitHub FIX */}
+              <a href="https://github.com/gopimahi7781/my-portfolio" target="_blank" rel="noopener noreferrer">
+                <button>GitHub</button>
+              </a>
+
+            </div>
           </div>
+
         </div>
       </section>
 
-      {/* CONTACT */}
-      <section id="contact" className="section">
+      {/* Contact */}
+      <section id="contact" className="contact">
         <h1>Contact</h1>
         <p>Email: gopikrishnareddyt@gmail.com</p>
         <p>Phone: +91 8978959469</p>
       </section>
-    </>
-  );
+
+    </div>
+  )
 }
 
-export default App;
+export default App
