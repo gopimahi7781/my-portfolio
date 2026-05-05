@@ -74,14 +74,18 @@ function App() {
             <h3>Portfolio</h3>
             <p>Personal website</p>
             <div className="btn-group">
-              <button>View</button>
 
-              {/* 👉 GitHub FIX */}
-              <a href="https://github.com/gopimahi7781/my-portfolio" target="_blank" rel="noopener noreferrer">
-                <button>GitHub</button>
-              </a>
+        {/* View */}
+        <a href="https://courageous-fairy-d0e77a.netlify.app" target="_blank" rel="noopener noreferrer">
+        <button>View</button>
+        </a>
 
-            </div>
+        {/* GitHub */}
+        <a href="https://github.com/gopimahi7781/my-portfolio" target="_blank" rel="noopener noreferrer">
+        <button>GitHub</button>
+        </a>
+
+         </div>
           </div>
 
         </div>
