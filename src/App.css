@@ -189,3 +189,18 @@ html {
   border: none;
   cursor: pointer;
 }
+.contact {
+  text-align: center;
+  padding: 40px;
+}
+
+.contact p {
+  margin: 10px 0;
+}
+
+.contact-links a {
+  margin: 10px;
+  color: #0ea5e9;
+  text-decoration: none;
+  font-weight: bold;
+}

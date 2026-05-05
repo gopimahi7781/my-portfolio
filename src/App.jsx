@@ -95,22 +95,15 @@ function App() {
       <section id="contact" className="contact">
   <h2>Contact Me</h2>
 
-  <form name="contact" method="POST" data-netlify="true">
-    
-    {/* Hidden input (must for Netlify) */}
-    <input type="hidden" name="form-name" value="contact" />
-
-    <input type="text" name="name" placeholder="Your Name" required />
-    
-    <input type="email" name="email" placeholder="Your Email" required />
-    
-    <textarea name="message" placeholder="Your Message" required></textarea>
-
-    <button type="submit">Send Message</button>
-  </form>
-
+  <p>📧 Email: gopikrishnareddyt@gmail.com</p>
+  <p>📞 Phone: +91 8978959469</p>
   <p>📍 Hyderabad, India</p>
-  </section>
+
+  <div className="contact-links">
+    <a href="https://github.com/gopimahi7781" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/your-linkedin" target="_blank">LinkedIn</a>
+  </div>
+</section>
 
     </div>
   )
