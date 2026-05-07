@@ -62,10 +62,14 @@ function App() {
           {/* Restaurant */}
           <div className="project-card">
             <h3>Restaurant</h3>
-            <p>Food ordering UI</p>
+            <p>Responsive Restaurant Website</p>
             <div className="btn-group">
+           <a href="https://playful-lily-0ad2bf.netlify.app"  target="_blank" rel="noopener noreferrer">
               <button>View</button>
+            </a>
+            <a href="https://github.com/gopimahi7781/restaurant-website.git" target="_blank" rel="noopener noreferrer">
               <button>GitHub</button>
+            </a>
             </div>
           </div>
 
