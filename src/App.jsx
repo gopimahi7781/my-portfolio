@@ -22,14 +22,14 @@ function App() {
         <img src="/professionalme.jpeg" alt="profile" className="profile-img" />
         <h1>Hello, I'm Gopi 👋</h1>
         <h3>Frontend Developer</h3>
-        <p>I build websites using React</p>
+        <p>Frontend Developer skilled in HTML, CSS, JavaScript & React</p>
         <button className="btn">Download Resume</button>
       </section>
 
       {/* About */}
       <section id="about" className="about">
         <h1>About Me</h1>
-        <p>I am a passionate frontend developer learning React and building projects.</p>
+        <p>I am a Passionate frontend developer focused on building modern and responsive web applications using React.</p>
       </section>
 
       {/* Skills */}
@@ -40,6 +40,11 @@ function App() {
           <span>CSS</span>
           <span>JavaScript</span>
           <span>React</span>
+          <span>Tailwind CSS</span>
+          <span>Responsive Design</span>
+          <span>Bootstrap</span>
+          <span>Java</span>
+          <span>Problem Solving</span>
         </div>
       </section>
 
@@ -49,15 +54,23 @@ function App() {
 
         <div className="project-container">
 
-          {/* E-Commerce */}
-          <div className="project-card">
-            <h3>E-Commerce</h3>
-            <p>React + Node.js website</p>
-            <div className="btn-group">
-              <button>View</button>
-              <button>GitHub</button>
-            </div>
-          </div>
+          {/* QuickChat App */}
+      <div className="project-card">
+      <h3>QuickChat App</h3>
+      <p>Real-time Chat Application</p>
+
+      <div className="btn-group">
+
+    <a href="https://idyllic-twilight-80531c.netlify.app" target="_blank"  rel="noopener noreferrer">
+      <button>View</button>
+    </a>
+
+    <a href="https://github.com/gopimahi7781/quickchat.git" target="_blank" rel="noopener noreferrer">
+      <button>GitHub</button>
+    </a>
+
+  </div>
+</div>
 
           {/* Restaurant */}
           <div className="project-card">
