@@ -22,14 +22,14 @@ function App() {
         <img src="/professionalme.jpeg" alt="profile" className="profile-img" />
         <h1>Hello, I'm Gopi 👋</h1>
         <h3>Frontend Developer</h3>
-        <p>Frontend Developer skilled in HTML, CSS, JavaScript & React</p>
+        <p>I build modern and responsive web applications using HTML, CSS, JavaScript & React.</p>
         <button className="btn">Download Resume</button>
       </section>
 
       {/* About */}
       <section id="about" className="about">
         <h1>About Me</h1>
-        <p>I am a Passionate frontend developer focused on building modern and responsive web applications using React.</p>
+        <p>I am a passionate frontend developer focused on creating modern, responsive and user-friendly web applications.</p>
       </section>
 
       {/* Skills */}
