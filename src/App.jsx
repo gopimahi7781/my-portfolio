@@ -23,7 +23,7 @@ function App() {
         <h1>Hello, I'm Gopi 👋</h1>
         <h3>Frontend Developer</h3>
         <p>I build modern and responsive web applications using HTML, CSS, JavaScript & React.</p>
-        <button className="btn">Download Resume</button>
+        <a href="/Gopi_Krishna_Reddy_Resume.pdf" download className="btn"> Download Resumde</a>
       </section>
 
       {/* About */}

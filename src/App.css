@@ -13,7 +13,7 @@ body {
 }
 
 .logo {
-  color: white; /* 👉 FIX (white text) */
+  color: white;
   font-weight: bold;
   font-size: 20px;
 }
@@ -23,34 +23,67 @@ body {
   color: white;
   text-decoration: none;
   font-size: 14px;
+  position: relative;
+}
+
+/* Nav hover underline */
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: white;
+  left: 0;
+  bottom: -3px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
 }
 
 /* Home */
 .home {
   text-align: center;
-  padding: 80px 20px; /* 👉 MORE SPACE */
+  padding: 80px 20px;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .profile-img {
   width: 120px;
   border-radius: 50%;
   margin-bottom: 20px;
+  animation: fadeIn 1.2s ease-in-out;
 }
 
+/* Resume Button */
 .btn {
+  display: inline-block;          /* IMPORTANT */
   background: #0ea5e9;
   color: white;
   padding: 10px 20px;
-  border: none;
-  margin-top: 15px;
+  margin-top: 25px;               /* ⬅️ Button text nundi koncham kindaki */
   border-radius: 6px;
   cursor: pointer;
+  text-decoration: none;          /* underline remove */
+  font-weight: bold;
+  transition: 0.3s;
+  border: none;
 }
 
-/* Sections spacing FIX */
-.about, .skills, .projects, .contact {
+.btn:hover {
+  background: #0284c7;
+  transform: scale(1.05);
+}
+
+/* Sections */
+.about,
+.skills,
+.projects,
+.contact {
   text-align: center;
-  padding: 80px 20px; /* 👉 BIG SPACE */
+  padding: 80px 20px;
+  animation: fadeIn 1s ease-in-out;
 }
 
 /* Skills */
@@ -71,7 +104,7 @@ body {
 .project-container {
   display: flex;
   justify-content: center;
-  gap: 30px; /* 👉 MORE GAP */
+  gap: 30px;
   margin-top: 30px;
   flex-wrap: wrap;
 }
@@ -81,19 +114,16 @@ body {
   border-radius: 12px;
   width: 250px;
   background: white;
-  transition: 0.3s;
-  
-  /* 👉 SHADOW ADD */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
-/* 👉 HOVER EFFECT */
 .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Buttons */
+/* Project Buttons */
 .btn-group {
   margin-top: 15px;
 }
@@ -107,7 +137,8 @@ body {
   color: white;
   cursor: pointer;
 }
-/* 🔥 FADE IN ANIMATION */
+
+/* Fade In Animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -119,54 +150,11 @@ body {
   }
 }
 
-/* Apply to sections */
-.home, .about, .skills, .projects, .contact {
-  animation: fadeIn 1s ease-in-out;
-}
-
-/* 🔥 PROFILE IMAGE ANIMATION */
-.profile-img {
-  animation: fadeIn 1.2s ease-in-out;
-}
-
-/* 🔥 BUTTON HOVER EFFECT */
-.btn:hover {
-  background: #0284c7;
-  transform: scale(1.05);
-  transition: 0.3s;
-}
-
-/* 🔥 PROJECT CARD HOVER (upgrade) */
-.project-card {
-  transition: all 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-8px) scale(1.02);
-}
-
-/* 🔥 NAV LINKS HOVER */
-.nav-links a {
-  position: relative;
-}
-
-.nav-links a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  background: white;
-  left: 0;
-  bottom: -3px;
-  transition: 0.3s;
-}
-
-.nav-links a:hover::after {
-  width: 100%;
-}
 html {
   scroll-behavior: smooth;
 }
+
+/* Contact Form */
 .contact form {
   display: flex;
   flex-direction: column;
@@ -189,6 +177,7 @@ html {
   border: none;
   cursor: pointer;
 }
+
 .contact {
   text-align: center;
   padding: 40px;
